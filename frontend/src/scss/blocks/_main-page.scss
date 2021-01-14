@@ -1,0 +1,18 @@
+.main-page {
+    background-color: #181818;
+    background-image: url("/img/raster/referral-mobile-background.png");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 57px - 64px);
+    position: relative;
+    padding-bottom: calc(57px + 64px);
+}
+
+@media (min-width: 768px) {
+    .main-page {
+        background-image: url("/img/raster/referral-background.png");
+        min-height: calc(100vh - 95px - 95px);
+        padding-bottom: calc(95px + 95px);
+    }
+}

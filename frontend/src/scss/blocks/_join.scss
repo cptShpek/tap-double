@@ -1,0 +1,100 @@
+.join {
+    text-align: center;
+
+    &__header {
+        font-size: 22px;
+        font-family: "gilroy-sb";
+        text-align: center;
+
+        img {
+            width: 13px;
+            padding-right: 4px;
+        }
+    }
+
+    &__text {
+        margin-top: -3px;
+        font-size: 13px;
+        line-height: 22px;
+        color: $text-grey;
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-block;
+        margin-top: 13px;
+        width: 122px;
+    }
+
+    &__users {
+        margin-top: 23px;
+        font-size: 13px;
+        color: $text-grey;
+
+        &-number {
+            color: $white;
+        }
+
+        &-icon {
+            padding-right: 4px;
+            position: relative;
+            top: 2px;
+        }
+
+        svg{
+            width: 13px;
+            height: 13px;
+            fill: $text-grey;
+            padding-right: 4px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .join {
+        &__header {
+            font-size: 30px;
+
+            img {
+                width: 18px;
+                padding-right: 6px;
+            }
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        &__button {
+            width: 170px;
+            margin-top: 35px;
+        }
+
+        &__users {
+            font-size: 18px;
+            margin-top: 30px;
+
+            &-icon {
+                width: 18px;
+                padding-right: 5px;
+                position: relative;
+                top: 3px;
+            }
+
+            svg{
+                width: 18px;
+                height: 18px;
+                fill: $text-grey;
+                padding-right: 7px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+}

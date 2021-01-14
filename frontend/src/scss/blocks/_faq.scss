@@ -1,0 +1,213 @@
+.faq {
+    padding-bottom: 5px;
+    padding-top: 0px;
+    margin-top: -7px;
+
+    &__section-header {
+        text-align: center;
+        font-size: 33px;
+        font-family: "gilroy-sb";
+        display: block;
+        width: 60px;
+        margin: 0 auto;
+        padding-left: 23px;
+        padding-right: 23px;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+
+        &::before,
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 54%;
+            height: 4px;
+            width: 12px;
+            background-color: $pink;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 30px;
+        max-width: 415px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        background-color: #1c1f24;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        transition: $anim;
+        margin-bottom: 11px;
+
+        &:hover {
+            background-color: #33373d;
+        }
+    }
+
+    &__title {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__header {
+        font-size: 14px;
+        font-family: "gilroy-b";
+
+        &::first-letter {
+            color: $pink;
+        }
+    }
+
+    &__description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    &__text {
+        font-size: 11px;
+        color: #5e636d;
+        line-height: 17px;
+        margin-top: 5px;
+        width: 80%;
+
+        a {
+            color: #dd4242;
+            text-decoration: none;
+        }
+    }
+
+    &__button {
+        font-size: 0;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #272a2f;
+        transition: $anim;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+
+        &::before {
+            height: 10px;
+            width: 10px;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            border-top: 0;
+            border-left: 0;
+            display: block;
+            content: "";
+            position: absolute;
+            top: calc(50% - 3px);
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+                
+        }
+    }
+
+    .active {
+        background-color: #272a2f;
+
+        .faq__button {
+            transform: rotate(180deg);
+            background-color: #33373d;
+
+            &::before {
+                border-bottom-color: $pink;
+                border-right-color: $pink;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .faq {
+        padding-bottom: 70px;
+
+        &__section-header {
+            font-size: 58px;
+            width: 140px;
+            margin-bottom: 55px;
+
+            &::before,
+            &::after {
+                height: 6px;
+                width: 22px;
+            }
+        }
+
+        &__wrapper {
+            max-width: 800px;
+        }
+
+        &__item {
+            padding: 40px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+            border-radius: 14px;
+            margin-bottom: 15px;
+        }
+
+        &__header {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 90%;
+        }
+
+        &__button {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+
+            &:before {
+                height: 18px;
+                width: 18px;
+                top: calc(50% - 5px);
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .faq {
+        &__wrapper {
+            max-width: 1100px;
+        }
+    }
+}
+
+@media (min-width: 1750px) {
+    .faq {
+        &__wrapper {
+            max-width: 1740px;
+        }
+    }
+}

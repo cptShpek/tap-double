@@ -1,0 +1,15 @@
+{
+  "short_name": "DappDouble",
+  "name": "DappDouble is a decentralized application based on Tron Network smart contracts which significantly accelerate your progress in the best Tron Dapps by giving opportunity to double your TRX or TRC tokens.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

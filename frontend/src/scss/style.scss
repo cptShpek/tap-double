@@ -1,0 +1,36 @@
+@import "normalize.scss";
+
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixin.scss";
+@import "scaffolding.scss";
+
+@import "blocks/button.scss";
+@import "blocks/modal.scss";
+
+@import "blocks/start-page.scss";
+@import "blocks/timer.scss";
+@import "blocks/join.scss";
+
+@import "blocks/main-page.scss";
+
+@import "blocks/nav.scss";
+@import "blocks/referral.scss";
+@import "blocks/partners.scss";
+@import "blocks/percentage.scss";
+
+@import "blocks/footer.scss";
+
+// Main page
+@import "blocks/main-content.scss";
+@import "blocks/stats.scss";
+@import "blocks/playground.scss";
+@import "blocks/game.scss";
+@import "blocks/deposit.scss";
+@import "blocks/info.scss";
+@import "blocks/faq.scss";
+@import "blocks/chart-bar.scss";
+@import "blocks/chart-table.scss";
+@import "blocks/charts.scss";
+@import "blocks/roulette-timer.scss";
+@import "blocks/chart.scss";

@@ -1,0 +1,210 @@
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    transition: 0.3s all;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #272a2f;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    max-width: 500px;
+    box-sizing: border-box;
+    color: $text-grey;
+    z-index: 110;
+
+    &__cross {
+        position: absolute;
+        font-size: 0;
+        border: 0;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        top: 12px;
+        right: 12px;
+        transition: $anim;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            opacity: 0.6;
+            transform: scale(0.96);
+        }
+
+        &::before,
+        &::after {
+            width: 15px;
+            height: 1px;
+            display: block;
+            content: "";
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background-color: #3e424a;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &__wrapper {
+        padding: 25px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &__picture {
+        width: 70px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        text-align: center;
+        display: block;
+        color: $white;
+        font-size: 17px;
+        font-family: "gilroy-sb";
+        margin-top: 25px;
+    }
+
+    &__text {
+        font-size: 11px;
+        font-family: "gilroy-reg";
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 18px;
+        line-height: 18px;
+    }
+
+    &__link {
+        width: 100%;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 6px;
+        padding-bottom: 11px;
+        margin-top: 22px;
+        text-decoration: none;
+        cursor: pointer;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            fill: $white;
+            padding-right: 4px;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    &__apps {
+        display: flex;
+        width: 85%;
+        max-width: 195px;
+        margin: 0 auto;
+        margin-top: 28px;
+        justify-content: space-around;
+        align-items: center;
+
+        &-apple {
+            width: 80px;
+        }
+
+        &-google {
+            width: 88px;
+        }
+    }
+}
+
+.modal--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 768px) {
+    .modal {
+        max-width: 670px;
+        padding-left: 58px;
+        padding-right: 58px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        &__cross {
+            width: 45px;
+            height: 45px;
+
+            &::before,
+            &::after {
+                width: 30px;
+                height: 3px;
+            }
+        }
+
+        &__picture {
+            width: 120px;
+        }
+
+        &__header {
+            font-size: 34px;
+            margin-top: 50px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 1.35em;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        &__link {
+            font-size: 20px;
+            padding-top: 21px;
+            padding-bottom: 22px;
+            margin-top: 60px;
+
+            svg {
+                width: 22px;
+                height: 22px;
+                padding-right: 8px;
+                top: 4px;
+            }
+        }
+
+        &__apps {
+            margin-top: 40px;
+            max-width: 400px;
+
+            &-apple {
+                width: 170px;
+            }
+
+            &-google {
+                width: 178px;
+            }
+        }
+    }
+}

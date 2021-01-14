@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket Io</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+      integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      const socket = io('http://142.93.226.89/', { resource: '/ws/socket.io' });
+      socket.on('connect', () => {
+        console.log('connected');
+      });
+
+      socket.on('deposit', ({ event }) => {
+        console.log(event.eventType, event);
+      });
+
+      socket.on('withdraw', ({ event }) => {
+        console.log(event.eventType, event);
+      });
+
+      socket.on('winx2', ({ event }) => {
+        console.log(event.eventType, event);
+      });
+
+      socket.on('newPlayer', ({ players }) => {
+        console.log('newPlayer', players);
+      });
+
+      socket.on('disconnect', () => {
+        console.log('disconnected');
+      });
+    </script>
+  </body>
+</html>

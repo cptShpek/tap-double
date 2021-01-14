@@ -1,0 +1,55 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-size: 28px;
+    //max-width: 1920px;
+    margin: 0 auto;
+
+    font-size: 18px;
+    font-family: "gilroy-md", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// Доступное скрытие элементов
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text--red{
+    color: $pink;
+}
+
+.text--green{
+    color: $green;
+}
+
+

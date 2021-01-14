@@ -1,0 +1,119 @@
+.info {
+    padding-top: 55px;
+    padding-bottom: 11px;
+    background-image: url("/img/raster/info-background.png");
+    background-size: 1308px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 46px;
+    }
+
+    &__number {
+        font-size: 34px;
+        font-family: "gilroy-sb";
+        padding-top: 27px;
+        position: relative;
+
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: 50%;
+            height: 6px;
+            width: 58px;
+            background-color: $pink;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        font-size: 14.4px;
+        margin-top: 7px;
+        font-family: "gilroy-md";
+        color: #5e636d;
+    }
+}
+
+@media (min-width: 768px) {
+    .info {
+        background-size: 2200px;
+        padding-top: 80px;
+        padding-bottom: 31px;
+
+        &__wrapper {
+            align-items: center;
+        }
+
+        &__item {
+            width: 80%;
+            text-align: center;
+        }
+
+        &__number {
+            font-size: 58px;
+            padding-top: 42px;
+
+            &::before {
+                width: 100px;
+                height: 10px;
+            }
+        }
+
+        &__text {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .info {
+        padding-top: 115px;
+        padding-bottom: 90px;
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        &__item {
+            width: 30%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .info {
+        &__wrapper {
+            max-width: 1100px;
+        }
+    }
+}
+
+@media (min-width: 1750px) {
+    .info {
+        &__wrapper {
+            max-width: 1660px;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 20%;
+        }
+    }
+}

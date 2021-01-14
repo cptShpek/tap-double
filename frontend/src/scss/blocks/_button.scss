@@ -1,0 +1,80 @@
+.button {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    color: $white;
+    box-sizing: border-box;
+    text-align: center;
+    width: 122px;
+    background-color: $pink;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    transition: $anim;
+    cursor: pointer;
+    border: 0;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+        transform: scale(0.96);
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--grey {
+        background-color: #33373d;
+
+        &:hover {
+            background-color: $pink;
+            opacity: 1;
+        }
+
+        &[disabled] {
+            opacity: 0.8;
+            cursor: default;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &[disabled] {
+        opacity: 0.8;
+        cursor: default;
+    }
+}
+
+.invite-friends {
+    font-size: 13px;
+    color: #5e636d;
+    line-height: 1.4;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .button {
+        font-size: 18px;
+        width: 170px;
+        padding-top: 14px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+    }
+}

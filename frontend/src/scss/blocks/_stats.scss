@@ -1,0 +1,393 @@
+.stats {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: #272a2f;
+        border-radius: 10px;
+        max-width: 415px;
+        margin: 0 auto;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &-title {
+            font-family: "gilroy-md";
+            color: #5e636d;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &-text {
+            font-size: 19px;
+            font-family: "gilroy-b";
+            letter-spacing: 0.08em;
+            margin-top: 8px;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &-currency {
+            display: none;
+        }
+
+        &--user {
+            .stats__block-text {
+                padding-left: 31px;
+                position: relative;
+
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $pink;
+                    transform: translateY(-50%);
+                    border-radius: 4px;
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 10px;
+                    height: 10px;
+                    background-image: url("/img/raster/user-icon-white.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+            }
+        }
+
+        &--icon {
+            .stats__block-text {
+                padding-left: 21px;
+                position: relative;
+
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url("/img/raster/сurrency-icon.png");
+                    background-size: 70%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transform: translateY(-50%);
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    &__username {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 25px;
+        padding-bottom: 22px;
+    }
+
+    &__total {
+        display: flex;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+
+        .stats__block {
+            width: calc(50% - 20px);
+        }
+    }
+
+    &__deposit {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+
+        .stats__block {
+            width: calc(50% - 20px);
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 25px;
+
+        &--withdraw {
+            span {
+                font-size: 11px;
+                position: relative;
+                padding-left: 19px;
+
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 51%;
+                    left: 0%;
+                    width: 13px;
+                    height: 13px;
+                    transform: translateY(-50%) rotate(180deg);
+                    background-image: url("/img/raster/withdraw-icon.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .stats {
+        margin-top: 40px;
+
+        &__wrapper {
+            max-width: 800px;
+        }
+
+        &__block {
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-top: 15px;
+
+            &-title {
+                font-size: 17px;
+            }
+
+            &-text {
+                font-size: 28px;
+                margin-top: 12px;
+                letter-spacing: 0.1em;
+            }
+
+            &-currency {
+                display: inline-block;
+                font-size: 17px;
+                font-family: "gilroy-md";
+                color: #5e636d;
+                letter-spacing: normal;
+            }
+
+            &--user {
+                .stats__block-text {
+                    padding-left: 52px;
+
+                    &::before {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 6px;
+                    }
+
+                    &::after {
+                        left: 16px;
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+
+            &--icon {
+                .stats__block-text {
+                    padding-left: 34px;
+
+                    &::before {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 6px;
+                        background-position: left center;
+                    }
+                }
+            }
+        }
+
+        &__total {
+            margin-top: 20px;
+
+            .stats__block {
+                width: calc(50% - 70px);
+            }
+        }
+
+        &__deposit {
+            margin-top: 20px;
+            padding-bottom: 40px;
+
+            .stats__block {
+                width: calc(50% - 70px);
+            }
+        }
+
+        &__button {
+            margin-left: 35px;
+            margin-right: 35px;
+            padding-top: 21px;
+            padding-bottom: 20px;
+            border-radius: 14px;
+            margin-top: 20px;
+
+            &--withdraw {
+                span {
+                    font-size: 18px;
+                    padding-left: 33px;
+
+                    &::before {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .stats {
+        margin-top: 70px;
+
+        &__wrapper {
+            background-color: transparent;
+            max-width: 1100px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__block {
+            padding: 40px;
+        }
+
+        &__username {
+            width: calc(50% - 45px);
+            background-color: #272a2f;
+            border-radius: 14px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        &__total {
+            width: calc(50% - 45px);
+            background-color: #272a2f;
+            border-radius: 14px;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        &__deposit {
+            width: 100%;
+            border-radius: 14px;
+            margin-top: 30px;
+            background-color: #272a2f;
+            position: relative;
+            overflow: hidden;
+
+            .stats__block {
+                width: calc(50% - 80px);
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 70%;
+                right: -25px;
+                width: 320px;
+                height: 320px;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url("/img/raster/stats-deposit-decoration.png");
+                background-size: cover;
+                z-index: 0;
+            }
+
+            .stats__block {
+                z-index: 1;
+            }
+
+            .stats__button {
+                z-index: 1;
+            }
+        }
+
+        &__button {
+            margin-top: -10px;
+        }
+    }
+}
+
+@media (min-width: 1750px) {
+    .stats {
+        &__wrapper {
+            max-width: 1740px;
+        }
+
+        &__block {
+            padding: 0;
+        }
+
+        &__username {
+            order: 1;
+            width: calc(23.56% - 30px - 65px);
+            padding: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        &__total {
+            order: 3;
+            width: calc(27% - 30px - 65px);
+            margin-top: 0;
+            padding: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+            justify-content: space-between;
+            .stats__block {
+                width: calc(50% - 15px);
+            }
+        }
+
+        &__deposit {
+            order: 2;
+            width: calc(45.11% - 30px - 65px);
+            margin-top: 0;
+            flex-direction: row;
+            padding: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .stats__block {
+                width: calc(45% - 60px);
+            }
+        }
+
+        &__button {
+            width: 180px;
+            align-self: center;
+            margin: 0;
+        }
+    }
+}

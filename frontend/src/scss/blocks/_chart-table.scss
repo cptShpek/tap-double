@@ -1,0 +1,167 @@
+.chart-table {
+    background-color: #272a2f;
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: hidden;
+
+    &__header {
+        font-size: 17px;
+        font-family: "gilroy-sb";
+    }
+
+    &__wrapper {
+        min-width: 375px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding-right: 20px;
+        max-height: 205px;
+        overflow-y: auto;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: "";
+            position: sticky;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: -moz-linear-gradient(top, rgba(39,42,47,0) 0%, rgba(39,42,47,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(39,42,47,0) 0%,rgba(39,42,47,1) 100%);
+            background: linear-gradient(to bottom, rgba(39,42,47,0) 0%,rgba(39,42,47,1) 100%);
+        }
+    }
+
+    &__row {
+        font-size: 9.6px;
+        font-family: "gilroy-md";
+        display: flex;
+        padding: 10px;
+        padding-bottom: 9.5px;
+        border-radius: 2px;
+        color: #ffffff;
+        text-decoration: none;
+
+        &:nth-child(2n + 2) {
+            background-color: #33373d;
+        }
+
+        &--header {
+            font-family: "gilroy-reg";
+            font-size: 8.3px;
+            color: #5e636d;
+        }
+
+        &--win {
+            background: linear-gradient(
+                90deg,
+                rgba(88, 206, 164, 1) 0%,
+                rgba(128, 235, 133, 1) 100%
+            );
+        }
+    }
+
+    &__event {
+        width: 89px;
+        width: 25%;
+    }
+
+    &__date {
+        width: 110px;
+        width: 31%;
+    }
+
+    &__adress {
+        width: 100px;
+        width: 26.67%;
+    }
+}
+
+@media (min-width: 415px) {
+    .chart-table {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding-right: 8px;
+
+        ::-webkit-scrollbar { width: 4px; height: 30px;}
+        ::-webkit-scrollbar-button {  height: 0; }
+        ::-webkit-scrollbar-track {  background-color: #272a2f;}
+        ::-webkit-scrollbar-track-piece { background-color: #272a2f;}
+        ::-webkit-scrollbar-thumb { 
+        height: 10px; background-color: #33373d; border-radius: 5px;} 
+
+        &__wrapper {
+            padding-right: 8px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .chart-table {
+        max-width: 800px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 14px;
+        padding-right: 16px;
+
+        ::-webkit-scrollbar { width: 8px; height: 30px;}
+        ::-webkit-scrollbar-button {  height: 0; }
+        ::-webkit-scrollbar-track {  background-color: #272a2f;}
+        ::-webkit-scrollbar-track-piece { background-color: #272a2f;}
+        ::-webkit-scrollbar-thumb { 
+        height: 10px; background-color: #33373d; border-radius: 5px;} 
+
+        &__header {
+            font-size: 30px;
+        }
+
+        &__wrapper {
+            max-width: initial;
+            margin-top: 10px;
+            max-height: 370px;
+            padding-right: 16px;
+
+            &::after {
+                height: 30px;
+                background: -moz-linear-gradient(top, rgba(39,42,47,0) 0%, rgba(39,42,47,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(39,42,47,0) 0%,rgba(39,42,47,1) 100%);
+                background: linear-gradient(to bottom, rgba(39,42,47,0) 0%,rgba(39,42,47,1) 100%);
+            }
+        }
+
+        &__row {
+            font-size: 18px;
+            padding-top: 17px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 4px;
+
+            &--header {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .chart-table {
+        max-width: 1100px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1750px) {
+    .chart-table {
+        width: calc(45.8% - 30px);
+        margin: 0;
+    }
+}

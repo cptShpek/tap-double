@@ -1,0 +1,504 @@
+.referral {
+    color: $text-grey;
+    display: flex;
+    min-height: calc(100vh - 57px - 64px - 90px);
+    align-items: center;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    &__block {
+        padding-bottom: 25px;
+        border-radius: 10px;
+        padding: 25px;
+        padding-top: 0;
+
+        &--left {
+            background-color: #272a2f;
+            margin-bottom: 20px;
+        }
+
+        &--right {
+            background-color: #1e2024;
+        }
+    }
+
+    &__header {
+        color: $white;
+        text-align: center;
+        font-size: 30px;
+        line-height: 47px;
+        margin-top: 24px;
+    }
+
+    &__text {
+        font-size: 13px;
+        text-align: center;
+        //max-width: 80%;
+        margin: 0 auto;
+        margin-top: -10px;
+        line-height: 1.5em;
+    }
+
+    &__title {
+        text-align: center;
+        color: $white;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    &__account {
+        background-color: #1e2024;
+        margin: 0 auto;
+        padding: 17px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        font-size: 10.5px;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-number {
+            color: $white;
+            font-size: 18px;
+            font-family: "gilroy-b";
+            letter-spacing: 0.1em;
+            padding-top: 3px;
+
+            span {
+                color: $text-grey;
+                font-size: 10px;
+                letter-spacing: normal;
+            }
+        }
+
+        &--right-block {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            background-color: #272a2f;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-radius: 5px;
+            margin-top: 18px;
+
+            &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                height: calc(100% - 30px);
+                width: 1px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #2e3237;
+            }
+
+            .referral__account-block {
+                width: 50%;
+                margin-bottom: 0;
+
+                .referral__account-number {
+                    font-size: 13px;
+                    font-family: "gilroy-sb";
+                    letter-spacing: -0.01em;
+                    margin-top: -1px;
+
+                    span {
+                        font-size: 13px;
+                        color: $pink;
+                        position: relative;
+                        top: -2;
+                        left: -2px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    position: relative;
+                    left: 15px;
+                    width: calc(50% - 15px);
+                }
+            }
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        margin-top: 26px;
+
+        &--withdraw {
+            padding-top: 11px;
+            padding-bottom: 13px;
+            width: 135px;
+        }
+    }
+
+    &__caption {
+        color: $white;
+        font-size: 17px;
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    &__link {
+        margin-top: 22px;
+        position: relative;
+
+        &-output {
+            background-color: #272a2f;
+            display: block;
+            padding: 15px;
+            padding-right: 35px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            color: $white;
+            font-family: "gilroy-sb";
+            font-size: 10px;
+        }
+
+        &-copy {
+            font-size: 0;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            transition: $anim;
+            background-color: #272a2f;
+            outline: none;
+
+            /* &::before {
+                display: block;
+                content: "";
+                width: 30px;
+                height: 100%;
+                position: absolute;
+                left: -30px;
+                top: 0;
+                background: linear-gradient(
+                    90deg,
+                    rgba(247, 247, 247, 0) 0%,
+                    rgba(39, 42, 47, 1) 75%
+                );
+            } */
+
+            &::after {
+                display: block;
+                width: 10px;
+                height: 100%;
+                position: absolute;
+                right: -10px;
+                top: 0;
+                background: #272a2f;
+            }
+
+            &:hover {
+                svg {
+                    opacity: 0.8;
+                }
+            }
+
+            &:active {
+                svg {
+                    opacity: 0.6;
+                    transform: translate(-50%, -50%) scale(0.9);
+                }
+            }
+
+            svg {
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                fill: $text-grey;
+                transition: $anim;
+                cursor: pointer;
+            }
+        }
+
+        &-gen {
+            width: 100%;
+            margin-top: 22px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .referral {
+        &__account {
+            &--left-block {
+                position: relative;
+                flex-direction: row;
+
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    height: calc(100% - 30px);
+                    width: 1px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #2e3237;
+                }
+
+                .referral__account-block {
+                    width: 50%;
+                    margin-bottom: 0;
+
+                    &:nth-child(2) {
+                        position: relative;
+                        left: 15px;
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .referral {
+        min-height: calc(100vh - 95px - 95px - 90px);
+
+        &__wrapper {
+            max-width: 670px;
+        }
+
+        &__block {
+            padding: 58px;
+            padding-top: 30px;
+
+            &--left {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__account {
+            padding: 30px;
+
+            &-text {
+                font-size: 18px;
+            }
+
+            &-number {
+                font-size: 32px;
+                letter-spacing: 0.08em;
+                padding-top: 7px;
+
+                span {
+                    font-size: 17px;
+                }
+            }
+
+            &--right-block {
+                padding-top: 27px;
+                padding-bottom: 27px;
+                margin-top: 50px;
+
+                &::before {
+                    height: calc(100% - 60px);
+                    width: 2px;
+                }
+
+                .referral__account-block {
+                    .referral__account-number {
+                        font-size: 24px;
+                        letter-spacing: -0.01em;
+                        margin-top: -1px;
+
+                        span {
+                            font-size: 23px;
+                            color: $pink;
+                            position: relative;
+                            top: -2;
+                            left: -2px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        position: relative;
+                        left: 30px;
+                        width: calc(50% - 30px);
+                    }
+                }
+            }
+
+            &--left-block {
+                &::before {
+                    height: calc(100% - 60px);
+                    width: 2px;
+                }
+
+                .referral__account-block {
+                    &:nth-child(2) {
+                        left: 30px;
+                        width: calc(50% - 30px);
+                    }
+                }
+            }
+        }
+
+        &__header {
+            font-size: 45px;
+            text-align: left;
+            line-height: 1.35em;
+        }
+
+        &__text {
+            text-align: left;
+            font-size: 22px;
+            margin-top: 50px;
+        }
+
+        &__title {
+            text-align: left;
+            font-size: 34px;
+            margin-top: 95px;
+        }
+
+        &__button {
+            margin: 0;
+            margin-top: 45px;
+            font-size: 20px;
+            //border-radius: 10px;
+            width: 235px;
+            padding-top: 21px;
+            padding-bottom: 22px;
+        }
+
+        &__caption {
+            font-size: 34px;
+        }
+
+        &__link {
+            margin-top: 45px;
+
+            &-output {
+                font-size: 20px;
+                padding-left: 30px;
+                padding-top: 20px;
+                padding-bottom: 21px;
+                padding-right: 50px;
+            }
+
+            &-copy {
+                height: 100%;
+                width: 60px;
+                margin-right: 7px;
+
+                svg {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+
+            &-gen {
+                font-size: 20px;
+                padding-top: 21px;
+                padding-bottom: 22px;
+                margin-top: 50px;
+            }
+
+            &::after {
+                display: block;
+                width: 30px;
+                height: 100%;
+                position: absolute;
+                right: -15px;
+                top: 0;
+                background: #272a2f;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .referral {
+        &__wrapper {
+            max-width: 800px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__block {
+            &--left {
+                margin-bottom: 40px;
+            }
+
+            &--right {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .referral {
+        &__wrapper {
+            flex-direction: row;
+            max-width: calc(1733px - 140px);
+            background-color: #272a2f;
+            border-radius: 15px;
+            padding-top: 80px;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 80px;
+            width: calc(100% - 40px - 40px);
+            margin: 0 auto;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        &__block {
+            &--left {
+                margin-bottom: 0px;
+                width: 50%;
+                max-width: 680px;
+            }
+
+            &--right {
+                margin-bottom: 0px;
+                width: 50%;
+                max-width: 550px;
+                align-self: start;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .referral {
+        &__wrapper {
+            padding-right: 95px;
+            padding-left: 25px;
+            margin-bottom: 45px;
+        }
+
+        &__header {
+            font-size: 60px;
+            margin-top: -10px;
+        }
+    }
+}

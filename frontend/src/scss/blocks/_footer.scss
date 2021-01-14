@@ -1,0 +1,101 @@
+.footer {
+    color: $text-grey;
+    border-top: 1px solid #272a2f;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+
+    &__logo {
+        font-family: "gilroy-b";
+        font-size: 12px;
+        padding-right: 4px;
+
+        span:nth-child(2) {
+            color: #a1a7b3;
+            position: relative;
+        }
+    }
+
+    &__block {
+        font-size: 10px;
+
+        a {
+            color: $text-grey;
+            text-decoration: none;
+        }
+    }
+
+    &__social {
+        min-width: 55px;
+
+        svg {
+            width: 17px;
+            height: 17px;
+            fill: $pink;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+
+        &__logo {
+            font-size: 20px;
+            padding-right: 14px;
+
+            span:nth-child(2) {
+                position: relative;
+            }
+        }
+
+        &__block {
+            font-size: 16px;
+        }
+
+        &__social {
+            margin-top: 5px;
+
+            .nav__social-item {
+                font-size: 16px;
+                margin-left: 50px;
+
+                svg {
+                    padding-right: 8px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer {
+        &__wrapper {
+            max-width: 1740px;
+            margin: 0 auto;
+        }
+    }
+}

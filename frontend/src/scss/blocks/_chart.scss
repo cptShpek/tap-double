@@ -1,0 +1,112 @@
+.chart {
+  min-width: 500px;
+  margin-top: 25px;
+  margin-left: -25px;
+  
+  &__schedule{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 800px;
+  height: 800px;
+  }
+
+  &__infopanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__left{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h2{
+        font-size: 40px;
+        color: #ffffff;
+      }
+
+      &__text{
+        color: #5e636d;
+        margin-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    
+  }
+
+  /* vertical and horizontal lines */
+  
+  .recharts-cartesian-grid-horizontal line {
+    fill: #33373d;
+  }
+
+  /* hidden path */
+  .recharts-tooltip-cursor{
+  }
+
+  .recharts-text.recharts-cartesian-axis-tick-value {
+    font-size: 14px;
+  }
+
+  .recharts-default-tooltip {
+    margin: 0px;
+    background: rgb(51, 55, 61);
+    border: 0px;
+    white-space: nowrap;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 12px;
+
+    & > span {
+      display: inline-block;
+    }
+  }
+
+  .recharts-tooltip-label {
+    margin: 0;
+    padding: 0;
+  }
+
+  .recharts-tooltip-value-wr {
+    padding: 0;
+    margin: 8px 0 0;
+  }
+
+  .name {
+    position: relative;
+    color: #5b606b;
+    margin-right: 4px;
+    margin-left: 18px;
+    padding: 0;
+
+    &--deposit, &--withdraw {
+      &:before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 8px);
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &--deposit:before {
+      background: #58e855;
+    }
+
+    &--withdraw {
+      margin-bottom: 0;
+
+      &:before {
+        background: #dd4242;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .chart {
+    padding-right: 25px;
+  }
+}
+

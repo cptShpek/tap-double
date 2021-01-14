@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "gilroy-reg";
+    src: url("/fonts/Gilroy-Regular.woff2") format("woff2"),
+        url("/fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroy-sb";
+    src: url("/fonts/Gilroy-Semibold.woff2") format("woff2"),
+        url("/fonts/Gilroy-Semibold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroy-md";
+    src: url("/fonts/Gilroy-Medium.woff2") format("woff2"),
+        url("/fonts/Gilroy-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gilroy-b";
+    src: url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+        url("/fonts/Gilroy-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nood";
+    src: url("/fonts/big_noodle_titling.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

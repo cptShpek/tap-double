@@ -1,0 +1,97 @@
+.percentage {
+    &__text {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        text-align: center;
+        display: inline-block;
+        background-color: #272a2f;
+        color: #5e636d;
+        border: 2px solid #393d44;
+        border-radius: 5px;
+        width: 36px;
+        font-size: 10px;
+        padding-top: 4px;
+        padding-bottom: 5px;
+        font-family: "gilroy-sb";
+        transition: $anim;
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+            border-color: $pink;
+            background-color: #582a2d;
+            opacity: 0.7;
+        }
+
+        &:active {
+            opacity: 0.6;
+            transform: scale(0.95);
+        }
+
+        &--active {
+            color: $white;
+            border-color: $pink;
+            background-color: #582a2d;
+
+            &:hover {
+                color: $white;
+                border-color: $pink;
+                background-color: #582a2d;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            &:active {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &--disable {
+            cursor: not-allowed;
+            opacity: 0.7;
+            border-color: #272a2f;
+
+            &:hover {
+                opacity: 0.7;
+                background-color: #272a2f;
+                color: #5e636d;
+                border-color: #272a2f;
+            }
+
+            &:active {
+                opacity: 0.7;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .percentage {
+        &__text {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        &__wrapper {
+            margin-top: 24px;
+        }
+
+        &__item {
+            font-size: 24px;
+            width: 92px;
+            padding-top: 8px;
+            padding-bottom: 9px;
+        }
+    }
+}
